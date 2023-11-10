@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js && swagger project start"
+    "start": "node index.js && swagger project start"
   },
   "author": "",
   "license": "ISC",
