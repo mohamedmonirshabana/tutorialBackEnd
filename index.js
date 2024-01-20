@@ -52,7 +52,7 @@ app.use("/videos", express.static(path.join(__dirname, "src", "videos")));
 app.use("/compress", express.static(path.join(__dirname, "src", "compressed")));
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "motiongraphic.tech");
   // write * for any Domain or write Domain
   res.setHeader(
     "Access-Control-Allow-Methods",
