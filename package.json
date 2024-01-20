@@ -2,10 +2,11 @@
   "name": "tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js && swagger project start"
+    "build": "webpack",
+    "start": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +28,7 @@
     "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "webpack-cli": "^5.1.4"
   }
 }
