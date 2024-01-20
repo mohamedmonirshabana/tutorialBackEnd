@@ -40,7 +40,10 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const app = express();
 
 swaggerDoc(app);
-app.use(cors());
+app.use(cors({
+  origin: 'https://motiongraphic.tech',
+  optionsSuccessStatus: 200
+}));
 app.use(
   bodyparser.urlencoded({
     extended: false,
