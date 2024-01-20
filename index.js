@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors')
 const path = require("path");
 const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
@@ -39,7 +40,7 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const app = express();
 
 swaggerDoc(app);
-
+app.use(cors());
 app.use(
   bodyparser.urlencoded({
     extended: false,
