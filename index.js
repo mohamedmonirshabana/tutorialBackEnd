@@ -54,17 +54,6 @@ app.use("/images", express.static(path.join(__dirname, "src", "photos")));
 app.use("/videos", express.static(path.join(__dirname, "src", "videos")));
 app.use("/compress", express.static(path.join(__dirname, "src", "compressed")));
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "motiongraphic.tech");
-  // write * for any Domain or write Domain
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PATCH, PUT, DELETE"
-  );
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
-
 mongoose.connect(mongoConf.host);
 mongoose.connection.on("error", (err) => {
   console.log(err);
