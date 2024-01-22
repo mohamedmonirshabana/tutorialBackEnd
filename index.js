@@ -82,7 +82,7 @@ app.use((error, req, res, next) => {
 // app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs));
 //******************************* */
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 80;
 
 app.listen(port, () => {
   console.log(`App is working on ${port}`);
